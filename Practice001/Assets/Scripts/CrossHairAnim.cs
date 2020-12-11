@@ -10,6 +10,7 @@ public GameObject LeftCurs;
 public GameObject RightCurs;
 
 void Update () {
+if(GlobalAmmo.LoadedAmmo >= 1){
  if (Input.GetButtonDown("Fire1")) {
   UpCurs.GetComponent<Animator> ().enabled = true;
   DownCurs.GetComponent<Animator> ().enabled = true;
@@ -17,6 +18,7 @@ void Update () {
   RightCurs.GetComponent<Animator> ().enabled = true;
   StartCoroutine(WaitingAnim());
  }
+}
 }
 
 IEnumerator WaitingAnim () {

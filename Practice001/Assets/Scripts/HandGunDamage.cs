@@ -10,6 +10,7 @@ public class HandGunDamage : MonoBehaviour
 
 
   void Update () {
+ if(GlobalAmmo.LoadedAmmo >= 1){     
   if(Input.GetButtonDown("Fire1")) {
    RaycastHit Shot;
    if (Physics.Raycast (transform.position, transform.TransformDirection(Vector3.forward), out Shot)) {
@@ -20,5 +21,6 @@ public class HandGunDamage : MonoBehaviour
    }
   }
  }
+}
 }
 
