@@ -36,7 +36,7 @@ public class PickUpGun : MonoBehaviour
     }
     void OnMouseExit()
     {
-        TextDisplay.GetComponent<Text>().text="Pick Up";
+        TextDisplay.GetComponent<Text>().text="";
     }
 
     IEnumerator PickUp9mm()
