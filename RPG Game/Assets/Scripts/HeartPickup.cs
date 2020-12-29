@@ -19,7 +19,11 @@ public class HeartPickup : MonoBehaviour
 
 	void OnTriggerEnter()
 	{
-		CollectSound.Play();
-		ThisHeart.SetActive(false);
+		if (HealthMonitor.HealthValue < 3)
+		{
+			CollectSound.Play();
+			HealthMonitor.HealthValue += 1;
+			ThisHeart.SetActive(false);
+		}
 	}
 }
